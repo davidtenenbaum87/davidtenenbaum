@@ -1,0 +1,47 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+    .footer {
+        display: grid;
+        // grid-template-columns: 2fr 2fr;
+        grid-template-areas: 
+            "links"
+            "copyright";
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100vw;
+        color: #DCC7AA;
+        font-size: 1.5rem;
+        font-family: 'Poiret One', cursive;
+        text-align: center;
+        background-color: #6B7A8F;
+        border-top: .3rem solid #DCC7AA;
+
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #DCC7AA;
+            font-size: 2rem;
+            &:not(:last-child) {
+                margin-right: 2.2rem;
+            }
+        }
+
+        // a:hover {
+        //     color: black;
+        //     font-size: 2.7rem;
+        // }
+
+        &-copyright {
+            grid-area: "copyright";
+            justify-self: center;
+            margin: 1rem 1rem;
+        }
+
+        &-links {
+            grid-area: "links";
+            justify-self: center;
+            margin: 1rem 1rem;
+        }
+    }
+}   

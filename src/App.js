@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import './main.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            portfolioItems: [
+                {
+                    title: "Boggle",
+                    vimeoURL: "https://player.vimeo.com/video/288186446",
+                    description: "Word game played using a grid of lettered dice, in which players attempt to find words in sequences of adjacent letters",
+                    githubLinks: {
+                        "Front-End": "https://github.com/davidtenenbaum87/boggle-frontend",
+                        "Back-End": "https://github.com/davidtenenbaum87/boggle-backend"
+                    }
+                },
+                {
+                    title: "Trello",
+                    vimeoURL: "https://player.vimeo.com/video/288975230",
+                    description: "Inspired by Trello.com, this is a fun, flexible and friendly way to organize plans, projects and more",
+                    githubLinks: {
+                        "Github": "https://github.com/davidtenenbaum87/Trello-Ruby-on-Rails"
+                    }
+                },
+                {
+                    title: "MusicStation",
+                    vimeoURL: "https://player.vimeo.com/video/288988954",
+                    description: "Browser-based music library enabling a better music learning experience for musicians. Upload music sheet to your library, automatically search and stream performances from YouTube, and access built-in metronome and tuner for practicing",
+                    githubLinks: {
+                        "Front-End": "https://github.com/davidtenenbaum87/Music-Station-FrontEnd",
+                        "Back-End": "https://github.com/davidtenenbaum87/Music-Station-BackEnd"
+                    }
+                }
+            ]
+        }
+    }
+
+    render() {
+        return(
+            <div className="app">
+                <Navbar />
+                <Fragment>
+                    <Route exact path="/" render={() => <Home />} />
+                    <Route exact path="/about" render={() => <About />} />
+                    <Route exact path="/portfolio" render={() => <Portfolio portfolioItems={this.state.portfolioItems} />} />
+                </Fragment>
+                <Footer />
+            </div>
+        )
+    }
 }
 
 export default App;

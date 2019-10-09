@@ -1,0 +1,76 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+    .navbar {
+        display: grid;
+        grid-template-areas: 
+        "menu name";
+        align-items: center;
+        background-color: #6B7A8F; 
+        border-bottom: .2rem solid #DCC7AA;
+        position: relative;
+        padding: 1rem 0;
+        
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #DCC7AA;
+        }
+    
+        &-name {
+            grid-area: "name";
+            justify-self: right;
+            font-size: 1.5rem;
+            font-family: 'Lobster', cursive;
+            margin-right: 1rem;
+        }
+    
+        &-menu-icon {
+            grid-area: "menu";
+            justify-self: left;
+            color: #DCC7AA;
+            font-size: 3rem;
+            padding-top: .5rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .menu {        
+        &-visible {
+            position: absolute;
+            visibility: visible;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            animation: displayMenu .5s ease-in ;
+            animation-fill-mode: forwards;
+            overflow: hidden;
+            
+            &-pages {
+                @include menuLinks;
+                a {
+                    border-bottom: .1rem solid black;
+                }
+            }
+
+            &-social-media {
+                display: flex;
+                flex-direction: row;
+                @include menuLinks;
+                border-bottom: .1rem solid black; 
+                margin: auto 1rem;
+            }
+        }
+        
+        &-hidden {
+            position: fixed;
+            visibility: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            animation: removeMenu .5s ease-out;
+            animation-fill-mode: forwards;
+            overflow: hidden;
+        }
+
+    }
+    
+}
