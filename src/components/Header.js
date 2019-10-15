@@ -32,10 +32,10 @@ class Navbar extends Component {
                         {icon}
                     </div>
                     <div className="navbar-name">
-                        <h1><NavLink to="/" className="navbar-link-home">David Tenenbaum</NavLink></h1>
+                        <h1><NavLink to="/" className="navbar-link-home" >David Tenenbaum</NavLink></h1>
                     </div>
                 </div>
-                <div className="menu-hidden" ref={this.menu} >
+                <div className="hidden" ref={this.menu} >
                     <div className="menu-visible-pages">
                         <NavLink to="/about" className="menu-about" onClick={this.toggleMenu}>About</NavLink>
                         <NavLink to="/portfolio" className="menu-portfolio" onClick={this.toggleMenu}>Portfolio</NavLink>

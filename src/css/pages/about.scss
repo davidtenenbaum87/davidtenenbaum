@@ -11,6 +11,7 @@
                     url('/david-tenenbaum-about.jpg');
         // clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%);
         background-size: cover;
+        background-position: center;
         animation: fadeIn 2s ease-in;
         li {
             list-style: none;

@@ -2,19 +2,24 @@ import React from 'react';
 
 const PortfolioItem = ({ portfolioItemInfo }) => {
     const githubLinks = Object.entries(portfolioItemInfo.githubLinks).map((link, index) => {
-        return <a key={index} href={link[1]}>{link[0]}</a>;
+        return <a key={index} href={link[1]}>{link[0]} &rarr;</a>;
     })
 
 
     return(
         <div className="portfolio-item">
-            <h3 className="portfolio-item--title">{portfolioItemInfo.title}</h3>
-            <p className="portfolio-item--description">{portfolioItemInfo.description}</p>
-            <div className="githubLinks">
+            <h3 className="portfolio-item-title">{portfolioItemInfo.title}</h3>
+            <div className="portfolio-item-githubLinks">
                 {githubLinks}
             </div>
-            <div className="portfolio-item--video">
-                <iframe title={portfolioItemInfo.title} src={portfolioItemInfo.vimeoURL} frameBorder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p className="portfolio-item-description">{portfolioItemInfo.description}</p>
+            <div className="portfolio-item-video">
+                <iframe title={portfolioItemInfo.title} 
+                        src={portfolioItemInfo.vimeoURL} 
+                        frameBorder="none" 
+                        webkitallowfullscreen="true"
+                        mozallowfullscreen="true"
+                        allowFullScreen={true}></iframe>
             </div>
         </div>
     )

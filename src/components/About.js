@@ -4,7 +4,7 @@ import React from "react";
 const About = props => {
   return (
     <div className="about">
-      <div className="employment">
+      <div className="about-employment">
         <ul>
           <li>
             Software Engineer @{" "}
@@ -14,19 +14,21 @@ const About = props => {
         </ul>
       </div>
 
-      <div className="langs">
-        Languages:
-        <ul>
-          <li>JavaScript</li>
-          <li>Ruby</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>C#</li>
-          <li>SQL</li>
-        </ul>
+      <div className="about-skills">
+        <div className="languages">
+          Languages:
+          <ul>
+            <li>JavaScript</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>C#</li>
+            <li>SQL</li>
+          </ul>
+        </div>
       </div>
 
-      <div className="frameworks">
+      <div className="about-frameworks">
         Frameworks & Libraries:
         <ul>
           <li>React.js</li>
@@ -38,7 +40,7 @@ const About = props => {
         </ul>
       </div>
 
-      <div className="education">
+      <div className="about-education">
         Education:
         <ul>
           <li>

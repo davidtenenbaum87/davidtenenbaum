@@ -4,15 +4,15 @@
         grid-template-areas: 
         "menu name";
         align-items: center;
-        background-color: #6B7A8F; 
-        border-bottom: .2rem solid #DCC7AA;
+        background-color: #73C49D; 
+        border-bottom: .2rem solid $white;
         position: relative;
         padding: 1rem 0;
         
         a:link,
         a:visited {
             text-decoration: none;
-            color: #DCC7AA;
+            color: $white;
         }
     
         &-name {
@@ -21,12 +21,13 @@
             font-size: 1.5rem;
             font-family: 'Lobster', cursive;
             margin-right: 1rem;
+            text-shadow: 1px 3px rgba($black, 0.2);
         }
     
         &-menu-icon {
             grid-area: "menu";
             justify-self: left;
-            color: #DCC7AA;
+            color: $white;
             font-size: 3rem;
             padding-top: .5rem;
             margin-left: 1rem;
@@ -39,7 +40,7 @@
             visibility: visible;
             width: 100vw;
             height: 100vh;
-            background-color: white;
+            background-color: $white;
             animation: displayMenu .5s ease-in ;
             animation-fill-mode: forwards;
             overflow: hidden;
@@ -47,7 +48,7 @@
             &-pages {
                 @include menuLinks;
                 a {
-                    border-bottom: .1rem solid black;
+                    border-bottom: .1rem solid $black;
                 }
             }
 
@@ -55,7 +56,7 @@
                 display: flex;
                 flex-direction: row;
                 @include menuLinks;
-                border-bottom: .1rem solid black; 
+                border-bottom: .1rem solid $black; 
                 margin: auto 1rem;
             }
         }
@@ -65,12 +66,15 @@
             visibility: hidden;
             width: 100vw;
             height: 100vh;
-            background-color: white;
+            background-color: $white;
             animation: removeMenu .5s ease-out;
             animation-fill-mode: forwards;
             overflow: hidden;
         }
 
     }
-    
+
+    .hidden {
+        display: none;
+    }   
 }
