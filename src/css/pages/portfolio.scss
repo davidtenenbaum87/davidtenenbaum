@@ -1,53 +1,55 @@
-.portfolio {
-    &-item {
-        display: flex;
-        flex-direction: column;
-        color: $white;
-        background-color: #6C6B99; 
-        padding-top: 1rem;
-        
-        &:not(:last-child) {
-            border-bottom: 2px solid $white;       
-        }
-
-        &-title {
-            color: #EAECAD;
-            font-size: 2.5rem;
-            font-family: 'Leckerli One', cursive;
-            text-shadow: .5rem .5rem .5rem rgba($black, .2);
-            margin: 0 2rem;
-            padding-bottom: 1rem;
-        }
-
-        &-githubLinks {
-            margin: .5rem 2rem;
-            font-size: 1.6rem;
-            font-family: 'Quantico', sans-serif;
-
-            a {
-                color: $white;
-                text-decoration: none;
-                margin-right: 1rem;
-                padding: .5rem 1rem;
-                border: 1px solid #EAECAD;
-                box-shadow: .5rem .5rem .5rem rgba($black, .2);
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+    .portfolio {
+        &-item {
+            display: flex;
+            flex-direction: column;
+            color: #1a3e59;
+            background-color: $white; 
+            padding-top: 1rem;
+            
+            &:not(:last-child) {
+                border-bottom: 2px solid #1a3e59;       
             }
-        }
 
-        &-description {
-            font-size: 1.6rem;
-            font-family: 'Quantico', sans-serif;
-            margin: 1rem 2rem 0 2rem;
-        }
-         
-
-        &-video {
-            margin: 2.5rem auto;
-            text-align: center;
-            iframe {
-                width: 80%;
-                box-shadow: .5rem .5rem 1rem rgba($black, .5);
+            &-title {
+                color: #470938;
+                font-size: 2.5rem;
+                font-family: 'Leckerli One', cursive;
+                text-shadow: .5rem .5rem .5rem rgba($black, .2);
+                margin: 0 2rem;
+                padding-bottom: 1rem;
             }
-        }
-    }     
+
+            &-githubLinks {
+                margin: .5rem 2rem;
+                font-size: 1.6rem;
+                font-family: 'Quantico', sans-serif;
+
+                a {
+                    color: #1a3e59;
+                    text-decoration: none;
+                    margin-right: 1rem;
+                    padding: .5rem 1rem;
+                    border: 1px solid #1a3e59;
+                    box-shadow: .5rem .5rem .5rem rgba($black, .2);
+                }
+            }
+
+            &-description {
+                font-size: 1.6rem;
+                font-family: 'Quantico', sans-serif;
+                margin: 1rem 2rem 0 2rem;
+            }
+            
+
+            &-video {
+                margin: 2.5rem auto;
+                text-align: center;
+                iframe {
+                    width: 80%;
+                    box-shadow: .5rem .5rem 1rem rgba($black, .5);
+                }
+            }
+        }     
+    }
 }

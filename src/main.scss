@@ -3,6 +3,8 @@
 @import 'css/abstracts/animations';
 
 @import 'css/base/base';
+@import 'css/base/typography';
+@import 'css/base/Utilities';
 
 @import 'css/layout/header';
 @import 'css/layout/footer';
@@ -10,3 +12,5 @@
 @import 'css/pages/home';
 @import 'css/pages/about';
 @import 'css/pages/portfolio';
+
+@import 'css/components/button';
