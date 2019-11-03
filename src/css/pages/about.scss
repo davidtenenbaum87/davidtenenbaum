@@ -1,7 +1,7 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
     .about {
-        padding: 1rem 2rem;
         height: auto;
+        padding: 1rem 2rem;
         font-size: 1.6rem;
         font-family: 'Quantico', sans-serif;
         color: #2d3436;
@@ -26,7 +26,6 @@
             margin-bottom: 1rem;
             &--school {
                 padding: .5rem 0;
-                // box-shadow: 0 1rem 1.5rem rgba($black, .15);
             }
         }
     

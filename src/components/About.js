@@ -4,7 +4,7 @@ import { FaJs, FaGithub, FaGoogle} from 'react-icons/fa';
 
 const About = props => {
   return (
-    <div className="about">
+    <section className="about">
 
       <div className="about__employment">
         <h4 className="header-about u-margin-bottom-extra-small u-border-bottom">
@@ -73,7 +73,7 @@ const About = props => {
       <div className="about__location">
         <i className="fas fa-map-marker-alt"></i>New York City
       </div>
-    </div>
+    </section>
   );
 };
 

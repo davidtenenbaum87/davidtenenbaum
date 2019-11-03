@@ -1,4 +1,14 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+    .header {
+        position: relative;
+
+        &__menu--on {
+            & ~ section {
+                display: none;
+            }
+        }
+    }
+    
     .navbar {
         display: grid;
         grid-template-areas: 
@@ -19,7 +29,7 @@
         &__david-tenenbaum {
             grid-area: name;
             justify-self: right;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-family: 'Lobster', cursive;
             margin-right: 1rem;
             text-shadow: 1px 3px rgba($black, 0.2);
@@ -27,7 +37,7 @@
 
         &__software-engineer {
             grid-area: job;
-            letter-spacing: .4rem;
+            letter-spacing: .37rem;
             justify-self: right;
             font-size: 1.4rem;
             font-family: 'Quantico', sans-serif;
@@ -45,20 +55,30 @@
                 margin-left: 1rem;
             }
             
-            &--hidden {
+            &--hidden-before {
                 display: none;
             }
             
+            &--hidden-after {
+                position: fixed;
+                visibility: hidden;
+                width: 100vw;
+                height: 100vh;
+                background-color: $white;
+                animation: removeMenu .5s ease-out;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
             
             &--visible {
                 position: absolute;
                 visibility: visible;
                 width: 100vw;
-                height: 100vh;
                 background-color: $white;
-                animation: displayMenu .5s ease-in ;
+                animation: displayMenu .5s ease-in;
                 animation-fill-mode: forwards;
                 overflow: hidden;
+                color: #2d3436;
             }
             
             &--pages {
@@ -76,16 +96,5 @@
                 margin: auto 1rem;
             }
         }
-    }
-    
-    .hidden {
-        position: fixed;
-        visibility: hidden;
-        width: 100vw;
-        height: 100vh;
-        background-color: $white;
-        animation: removeMenu .5s ease-out;
-        animation-fill-mode: forwards;
-        overflow: hidden;
-    }
+    }  
 }

@@ -1,32 +1,28 @@
 @keyframes displayMenu {
     0% {
-        transform: translateY(-50px);
         opacity: 0;
         height: 0vh;
+        visibility: hidden;
     }
 
     100% {
-        transform: translateY(0);
         opacity: 1;
         height: 100vh;
+        visibility: visible;
     }
 }
 
 @keyframes removeMenu {
     0% {
-        // transform: translateY(0);
         opacity: 1;
         height: 100vh;
         visibility: visible;
-
     }
 
     100% {
-        // transform: translateY(-50px);
         opacity: 0;
         height: 0vh;
         visibility: hidden;
-
     }
 }
 
