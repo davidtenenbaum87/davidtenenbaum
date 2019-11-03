@@ -4,7 +4,7 @@
         height: auto;
         font-size: 1.6rem;
         font-family: 'Quantico', sans-serif;
-        color: #1a3e59;
+        color: #2d3436;
         background-image: 
             linear-gradient(to right top, 
                     rgba($white, .7), 
@@ -33,12 +33,13 @@
         li {
             list-style: none;
             margin: .5rem auto;
-
-            i {
-                margin-right: 1rem;
-                color: #1a3e59;
-                font-size: 2.5rem;
-            }
+        }
+        
+        i {
+            margin-right: 1rem;
+            color: #2d3436;
+            font-size: 2.5rem;
+            display: inline-block;
         }
     }
 }

@@ -3,11 +3,11 @@ import PortfolioItem from './PortfolioItem';
 
 const Portfolio = (props) => {
     return(
-        <div className="portfolio">
+        <section className="portfolio">
             <PortfolioItem portfolioItemInfo={props.portfolioItems[0]} />
             <PortfolioItem portfolioItemInfo={props.portfolioItems[1]} />
             <PortfolioItem portfolioItemInfo={props.portfolioItems[2]} />
-        </div>
+        </section>
     )
 }
 

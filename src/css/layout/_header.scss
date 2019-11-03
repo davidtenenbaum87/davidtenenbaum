@@ -2,9 +2,10 @@
     .navbar {
         display: grid;
         grid-template-areas: 
-        "menu name";
+        "icon name"
+        "icon job";
         align-items: center;
-        background-color: #5c94bd; 
+        background-color: #a29bfe; 
         border-bottom: .2rem solid $white;
         position: relative;
         padding: 1rem 0;
@@ -14,45 +15,60 @@
             text-decoration: none;
             color: $white;
         }
-    
-        &-name {
-            grid-area: "name";
+
+        &__david-tenenbaum {
+            grid-area: name;
             justify-self: right;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-family: 'Lobster', cursive;
             margin-right: 1rem;
             text-shadow: 1px 3px rgba($black, 0.2);
         }
-    
-        &-menu-icon {
-            grid-area: "menu";
-            justify-self: left;
-            color: $white;
-            font-size: 3rem;
-            padding-top: .5rem;
-            margin-left: 1rem;
-        }
-    }
 
-    .menu {        
-        &-visible {
-            position: absolute;
-            visibility: visible;
-            width: 100vw;
-            height: 100vh;
-            background-color: $white;
-            animation: displayMenu .5s ease-in ;
-            animation-fill-mode: forwards;
-            overflow: hidden;
+        &__software-engineer {
+            grid-area: job;
+            letter-spacing: .4rem;
+            justify-self: right;
+            font-size: 1.4rem;
+            font-family: 'Quantico', sans-serif;
+            margin-right: 1rem;
+            text-shadow: 1px 3px rgba($black, 0.2);
+        }
+
+        &__menu {
+            &--icon {
+                grid-area: icon;
+                justify-self: left;
+                color: $white;
+                font-size: 3rem;
+                padding-top: .5rem;
+                margin-left: 1rem;
+            }
             
-            &-pages {
+            &--hidden {
+                display: none;
+            }
+            
+            
+            &--visible {
+                position: absolute;
+                visibility: visible;
+                width: 100vw;
+                height: 100vh;
+                background-color: $white;
+                animation: displayMenu .5s ease-in ;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+            
+            &--pages {
                 @include menuLinks;
                 a {
                     border-bottom: .1rem solid $black;
                 }
             }
-
-            &-social-media {
+            
+            &--social-media {
                 display: flex;
                 flex-direction: row;
                 @include menuLinks;
@@ -60,21 +76,16 @@
                 margin: auto 1rem;
             }
         }
-        
-        &-hidden {
-            position: fixed;
-            visibility: hidden;
-            width: 100vw;
-            height: 100vh;
-            background-color: $white;
-            animation: removeMenu .5s ease-out;
-            animation-fill-mode: forwards;
-            overflow: hidden;
-        }
-
     }
-
+    
     .hidden {
-        display: none;
-    }   
+        position: fixed;
+        visibility: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: $white;
+        animation: removeMenu .5s ease-out;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+    }
 }

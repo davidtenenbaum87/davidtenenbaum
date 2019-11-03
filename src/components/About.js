@@ -5,16 +5,17 @@ import { FaJs, FaGithub, FaGoogle} from 'react-icons/fa';
 const About = props => {
   return (
     <div className="about">
+
       <div className="about__employment">
         <h4 className="header-about u-margin-bottom-extra-small u-border-bottom">
           Experience:
         </h4>
         <ul>
-          <li className="u-text-bold">* Software Engineer @
-            <a href="https://integri-data.com/" className="btn u-margin-left-small">IntegriDATA</a>
+          <li className="u-text-bold"><i className="fas fa-laptop-code"></i>Software Engineer @ &nbsp;
+            <a href="https://integri-data.com/" className="btn">IntegriDATA</a>
           </li>
           <li className="u-text-italic">January 2019 - Present</li>
-          <li className="u-text-bold">* Bassist @ David Tenenbaum Music</li>
+          <li className="u-text-bold"><i className="fas fa-music"></i>Bassist @ David Tenenbaum Music</li>
           <li className="u-text-italic">2013 - Present</li>
         </ul>
       </div>
@@ -46,7 +47,7 @@ const About = props => {
         </h4>
         <div className="about__education--school">
           <li className="u-text-bold">
-            * The Juilliard School / NYC
+          <i className="fas fa-graduation-cap"></i>The Juilliard School / NYC
           </li>
           <li className="u-text-italic">
             Master of Music
@@ -54,7 +55,7 @@ const About = props => {
         </div>
         <div className="about__education--school">
           <li className="u-text-bold">
-            * Tel-Aviv University / TLV, Israel
+          <i className="fas fa-graduation-cap"></i>Tel-Aviv University / TLV, Israel
           </li>
           <li className="u-text-italic">
             Bachelor of Music
@@ -62,13 +63,15 @@ const About = props => {
         </div>
         <div className="about__education--school">
           <li className="u-text-bold">
-            * Flatiron School / NYC
+          <i className="fas fa-graduation-cap"></i>Flatiron School / NYC
           </li>
           <li className="u-text-italic">
             Software Engineering Immersive
           </li>
         </div>
-
+      </div>
+      <div className="about__location">
+        <i className="fas fa-map-marker-alt"></i>New York City
       </div>
     </div>
   );
