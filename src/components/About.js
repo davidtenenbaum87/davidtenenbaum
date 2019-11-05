@@ -1,6 +1,4 @@
 import React from "react";
-import { FaJs, FaGithub, FaGoogle} from 'react-icons/fa';
-
 
 const About = props => {
   return (

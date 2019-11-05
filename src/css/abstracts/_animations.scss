@@ -1,11 +1,13 @@
 @keyframes displayMenu {
     0% {
+        transform: translateY(-10rem);
         opacity: 0;
         height: 0vh;
         visibility: hidden;
     }
 
     100% {
+        transform: translateY(0);
         opacity: 1;
         height: 100vh;
         visibility: visible;

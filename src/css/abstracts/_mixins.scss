@@ -1,7 +1,21 @@
-@mixin menuLinks {
+@mixin menuLinksMobile {
     a:link,
     a:visited {
         display: block;
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-family: 'Quantico', sans-serif;
+        color: #2d3436;
+        margin: auto 1rem;
+        padding: 2rem 0;
+        text-transform: uppercase;
+    }
+}
+
+@mixin menuLinksDesktop {
+    a:link,
+    a:visited {
+        display: inline-block;
         text-decoration: none;
         font-size: 2.5rem;
         font-family: 'Quantico', sans-serif;

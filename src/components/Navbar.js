@@ -46,6 +46,13 @@ class Navbar extends Component {
                     <div className="navbar__software-engineer" onClick={this.removeMenu}>
                         <h3><NavLink to="/">Software Engineer</NavLink></h3>
                     </div>
+                    <div className="navbar__menu--desktop" ref={this.menu}>
+                        <div className="navbar__menu--pages">
+                            <NavLink to="/about" className="menu-about" onClick={this.toggleMenu}>About</NavLink>
+                            <NavLink to="/portfolio" className="menu-portfolio" onClick={this.toggleMenu}>Portfolio</NavLink>
+                            <NavLink to="./David-Tenenbaum-CV.pdf" target="_blank" className="menu-resume" onClick={this.toggleMenu}>Resume</NavLink>
+                        </div>
+                    </div>
                 </nav>
                 <div className="navbar__menu--hidden-before" ref={this.menu}>
                     <div className="navbar__menu--pages">

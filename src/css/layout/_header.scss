@@ -1,4 +1,4 @@
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+@media only screen and (min-width: 0) and (max-width: 899px)  {
     .header {
         position: relative;
 
@@ -46,6 +46,10 @@
         }
 
         &__menu {
+            &--desktop {
+                display: none;
+            }
+
             &--icon {
                 grid-area: icon;
                 justify-self: left;
@@ -82,7 +86,7 @@
             }
             
             &--pages {
-                @include menuLinks;
+                @include menuLinksMobile;
                 a {
                     border-bottom: .1rem solid $black;
                 }
@@ -91,10 +95,88 @@
             &--social-media {
                 display: flex;
                 flex-direction: row;
-                @include menuLinks;
+                @include menuLinksMobile;
                 border-bottom: .1rem solid $black; 
                 margin: auto 1rem;
             }
         }
-    }  
+    }
+}
+
+@media screen and (min-width: 899px) and (max-width: 1050px) {
+    .header {
+        position: relative;
+    }
+    
+    .navbar {
+        display: grid;
+        grid-template-areas: 
+        "name links"
+        "job links";
+        align-items: center;
+        background-color: #a29bfe; 
+        border-bottom: .2rem solid $white;
+        position: relative;
+        padding: 1rem 0;
+        
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: $white;
+        }
+
+        &__david-tenenbaum {
+            grid-area: name;
+            justify-self: left;
+            font-size: 3.2rem;
+            font-family: 'Lobster', cursive;
+            margin-left: 1.5rem;
+            text-shadow: 1px 3px rgba($black, 0.2);
+        }
+
+        &__software-engineer {
+            grid-area: job;
+            letter-spacing: .37rem;
+            justify-self: left;
+            font-size: 2rem;
+            font-family: 'Quantico', sans-serif;
+            margin-left: 1.5rem;
+            text-shadow: 1px 3px rgba($black, 0.2);
+        }
+
+        &__menu {
+            &--desktop {
+                grid-area: links;
+                justify-self: right;
+                align-self: center;
+                margin-right: 1rem; 
+            }
+            
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white; 
+            }
+
+            &--icon {
+                display: none;
+            }
+
+            &--hidden-before {
+                display: none;
+            }
+
+            &--hidden-after {
+                display: none;
+            }
+            
+            &--visible {
+                display: none;
+            }
+
+            &--pages {
+                @include menuLinksDesktop;
+            }
+        }
+    }
 }
