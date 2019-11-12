@@ -3,9 +3,8 @@ import React from "react";
 const About = props => {
   return (
     <section className="about">
-
-      <div className="about__employment">
-        <h4 className="header-about u-margin-bottom-extra-small u-border-bottom">
+      <div className="about__experience">
+        <h4 className="header-about u-margin-bottom-extra-small">
           Experience:
         </h4>
         <ul>
@@ -19,8 +18,8 @@ const About = props => {
       </div>
 
       <div className="about__skills">
-        <h4 className="header-about u-margin-bottom-extra-small u-border-bottom">
-          Core Skills:
+        <h4 className="header-about u-margin-bottom-extra-small">
+          Skills:
         </h4>
         <div className="about__skills--list">
           <ul>
@@ -40,7 +39,7 @@ const About = props => {
       </div>
 
       <div className="about__education">
-        <h4 className="header-about u-margin-bottom-extra-small u-border-bottom">
+        <h4 className="header-about u-margin-bottom-extra-small">
           Education:
         </h4>
         <div className="about__education--school">
@@ -68,9 +67,9 @@ const About = props => {
           </li>
         </div>
       </div>
-      <div className="about__location">
+      {/* <div className="about__location">
         <i className="fas fa-map-marker-alt"></i>New York City
-      </div>
+      </div> */}
     </section>
   );
 };

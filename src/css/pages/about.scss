@@ -1,4 +1,4 @@
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+@media only screen and (min-width: 0) and (max-width: 899px)  {
     .about {
         height: auto;
         padding: 1rem 2rem;
@@ -14,7 +14,7 @@
         background-position: center;
         animation: fadeIn 2s ease-in;
 
-        &__employment {
+        &__experience {
             margin-bottom: 2rem;
         }
 
@@ -39,6 +39,63 @@
             color: #2d3436;
             font-size: 2.5rem;
             display: inline-block;
+        }
+    }
+}
+
+@media screen and (min-width: 899px) and (max-width: 1050px) {
+    .about {
+        height: 84vh;
+        padding: 1rem 4rem;
+        font-size: 2.4rem;
+        font-family: 'Quantico', sans-serif;
+        color: #2d3436;
+        animation: fadeIn 2s ease-in;
+        display: grid;
+        grid-template-columns: 70% 1fr;
+        grid-template-areas: 
+            "experience"
+            "skills"
+            "education";
+
+        h4 {
+            font-size: 4rem;
+            color: #a29bfe;
+            text-shadow: 0 .5rem .5rem rgba($black, .2);
+            margin-bottom: 2rem;
+        }
+ 
+        &__experience {
+            grid-area: experience;
+        }
+
+        &__skills {
+            grid-area: skills;
+        }
+
+        &__education {
+            grid-area: education;
+        }
+        
+        &__location {
+            grid-area: location;
+        }
+        
+        &__experience,
+        &__skills,
+        &__education {
+            display: inline-block;
+            li {
+                list-style: none;
+                text-align: left;
+                margin-left: 5rem;
+            }
+        }
+
+        i {
+            margin-right: 1rem;
+            color: #a29bfe;
+            font-size: 2.5rem;
         }
     }
 }

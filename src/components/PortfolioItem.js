@@ -8,6 +8,9 @@ const PortfolioItem = ({ portfolioItemInfo }) => {
     return (
         <div className="portfolio-item">
             <h3 className="portfolio-item__title">{portfolioItemInfo.title}</h3>
+            <div className="portfolio-item__technologies">
+                {portfolioItemInfo.technologies}
+            </div>
             <div className="portfolio-item__githubLinks">
                 {githubLinks}
             </div>

@@ -20,7 +20,8 @@ class App extends Component {
                     githubLinks: {
                         "Front-End": "https://github.com/davidtenenbaum87/boggle-frontend",
                         "Back-End": "https://github.com/davidtenenbaum87/boggle-backend"
-                    }
+                    },
+                    technologies: "JavaScript (ES6) ~ CSS"
                 },
                 {
                     title: "Trello",
@@ -28,7 +29,8 @@ class App extends Component {
                     description: "Inspired by Trello.com, this is a fun, flexible and friendly way to organize plans, projects and more",
                     githubLinks: {
                         "Github": "https://github.com/davidtenenbaum87/Trello-Ruby-on-Rails"
-                    }
+                    },
+                    technologies: "Ruby-on-Rails"
                 },
                 {
                     title: "MusicStation",
@@ -37,7 +39,8 @@ class App extends Component {
                     githubLinks: {
                         "Front-End": "https://github.com/davidtenenbaum87/Music-Station-FrontEnd",
                         "Back-End": "https://github.com/davidtenenbaum87/Music-Station-BackEnd"
-                    }
+                    },
+                    technologies: "React ~ Redux ~ Rails API ~ CSS"
                 }
             ]
         }
