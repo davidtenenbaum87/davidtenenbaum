@@ -1,51 +1,43 @@
-@media only screen and (min-width: 0) and (max-width: 899px)  {
+//Portrait and landscape phones
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
     .about {
         height: auto;
         padding: 1rem 2rem;
         font-size: 1.6rem;
         font-family: 'Quantico', sans-serif;
         color: #2d3436;
-        background-image: 
-            linear-gradient(to right top, 
-                    rgba($white, .7), 
-                    rgba($white, .7)),
-                url('/img/david-tenenbaum-about.jpg');
-        background-size: cover;
-        background-position: center;
         animation: fadeIn 2s ease-in;
 
-        &__experience {
-            margin-bottom: 2rem;
-        }
-
-        &__skills {
-            margin-bottom: 2rem;
-        }
-
+        &__experience,
+        &__skills,
         &__education {
-            margin-bottom: 1rem;
-            &--school {
-                padding: .5rem 0;
+            margin-bottom: 2rem;
+            display: inline-block;
+            li {
+                list-style: none;
+                text-align: left;
+                margin-left: 3rem;
             }
         }
-    
-        li {
-            list-style: none;
-            margin: .5rem auto;
-        }
-        
+
         i {
             margin-right: 1rem;
-            color: #2d3436;
+            color: #a29bfe;
             font-size: 2.5rem;
             display: inline-block;
         }
     }
 }
 
-@media screen and (min-width: 899px) and (max-width: 1050px) {
+//Portrait and landscape iPad mini 2, iPad mini 3, iPad mini 4, iPad 3, iPad 4, iPad Air and iPad Air 2
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
     .about {
-        height: 84vh;
+        height: auto;
         padding: 1rem 4rem;
         font-size: 2.4rem;
         font-family: 'Quantico', sans-serif;
@@ -60,7 +52,68 @@
 
         h4 {
             font-size: 4rem;
+            color: #2d3436;
+            text-shadow: 0 .5rem .5rem rgba($black, .2);
+            margin-bottom: 2rem;
+        }
+ 
+        &__experience {
+            grid-area: experience;
+        }
+
+        &__skills {
+            grid-area: skills;
+        }
+
+        &__education {
+            grid-area: education;
+        }
+        
+        &__location {
+            grid-area: location;
+        }
+        
+        &__experience,
+        &__skills,
+        &__education {
+            display: inline-block;
+            li {
+                list-style: none;
+                text-align: left;
+                margin-left: 5rem;
+            }
+        }
+
+        i {
+            margin-right: 1rem;
             color: #a29bfe;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+//Portrait and landscape iPad Pro
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+        height: 84vh;
+        padding: 1rem 4rem;
+        font-size: 2.7rem;
+        font-family: 'Quantico', sans-serif;
+        color: #2d3436;
+        animation: fadeIn 2s ease-in;
+        display: grid;
+        grid-template-columns: 70% 1fr;
+        grid-template-areas: 
+            "experience"
+            "skills"
+            "education";
+
+        h4 {
+            font-size: 5rem;
+            color: #2d3436;
             text-shadow: 0 .5rem .5rem rgba($black, .2);
             margin-bottom: 2rem;
         }

@@ -1,4 +1,7 @@
-@media only screen and (min-width: 0) and (max-width: 899px)  {
+//Portrait and landscape phones
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
     .header {
         position: relative;
 
@@ -103,7 +106,12 @@
     }
 }
 
-@media screen and (min-width: 899px) and (max-width: 1050px) {
+//Portrait and landscape iPad mini 2, iPad mini 3, iPad mini 4, iPad 3, iPad 4, iPad Air and iPad Air 2
+//Portrait and landscape iPad Pro
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
     .header {
         position: relative;
     }
@@ -180,3 +188,85 @@
         }
     }
 }
+
+//Portrait and landscape iPad Pro
+// @media only screen 
+//   and (min-device-width: 1024px) 
+//   and (max-device-width: 1366px) 
+//   and (-webkit-min-device-pixel-ratio: 2) {
+//     .header {
+//         position: relative;
+//     }
+    
+//     .navbar {
+//         display: grid;
+//         grid-template-areas: 
+//         "name links"
+//         "job links";
+//         align-items: center;
+//         background-color: #a29bfe; 
+//         border-bottom: .2rem solid $white;
+//         position: relative;
+//         padding: 1rem 0;
+        
+//         a:link,
+//         a:visited {
+//             text-decoration: none;
+//             color: $white;
+//         }
+
+//         &__david-tenenbaum {
+//             grid-area: name;
+//             justify-self: left;
+//             font-size: 3.2rem;
+//             font-family: 'Lobster', cursive;
+//             margin-left: 1.5rem;
+//             text-shadow: 1px 3px rgba($black, 0.2);
+//         }
+
+//         &__software-engineer {
+//             grid-area: job;
+//             letter-spacing: .37rem;
+//             justify-self: left;
+//             font-size: 2rem;
+//             font-family: 'Quantico', sans-serif;
+//             margin-left: 1.5rem;
+//             text-shadow: 1px 3px rgba($black, 0.2);
+//         }
+
+//         &__menu {
+//             &--desktop {
+//                 grid-area: links;
+//                 justify-self: right;
+//                 align-self: center;
+//                 margin-right: 1rem; 
+//             }
+            
+//             a:link,
+//             a:visited {
+//                 text-decoration: none;
+//                 color: $white; 
+//             }
+
+//             &--icon {
+//                 display: none;
+//             }
+
+//             &--hidden-before {
+//                 display: none;
+//             }
+
+//             &--hidden-after {
+//                 display: none;
+//             }
+            
+//             &--visible {
+//                 display: none;
+//             }
+
+//             &--pages {
+//                 @include menuLinksDesktop;
+//             }
+//         }
+//     } 
+// }

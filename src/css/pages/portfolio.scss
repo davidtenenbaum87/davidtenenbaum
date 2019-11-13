@@ -1,4 +1,7 @@
-@media only screen and (min-width: 0) and (max-width: 899px)  {
+//Portrait and landscape phones
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
     .portfolio {
         &-item {
             display: flex;
@@ -59,24 +62,29 @@
     }
 }
 
-@media screen and (min-width: 899px) and (max-width: 1050px) {
+//Portrait and landscape iPad mini 2, iPad mini 3, iPad mini 4, iPad 3, iPad 4, iPad Air and iPad Air 2
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
     .portfolio {
-        height: 82.5vh;
-        padding: 2rem 2rem;
+        height: auto;
+        padding: 0 2rem;
         &-item {
             display: grid;
             color: #2d3436;
             background-color: $white; 
-            padding: 1rem 2rem;
+            padding: 0rem 2rem 2rem 2rem;
             grid-template-columns: 60% 1fr;
             grid-template-areas:
                 "title video"
                 "tech video"
                 "links video"
                 "description video";
-
-            &:not(:first-child) {
-                margin-top: 6rem;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid #2d3436;       
+                margin-bottom: 1rem;
             }
 
             &__title {
@@ -108,10 +116,85 @@
                 grid-area: description;
                 font-size: 2rem;
                 font-family: 'Quantico', sans-serif;
-                margin: 1rem 0;
+                margin: 1rem 2rem 0 0;
             }
             
+            &__video {
+                grid-area: video;
+                overflow: hidden;
+                padding-top: 56.25%;
+                position: relative;
+                iframe {
+                    border: 0;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    box-shadow: .5rem .5rem 1rem rgba($black, .5);
+                }
+            }
+        }     
+    }
+}
 
+//Portrait and landscape iPad Pro
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .portfolio {
+        height: 85.2vh;
+        padding: 0 2rem;
+        &-item {
+            display: grid;
+            color: #2d3436;
+            background-color: $white; 
+            padding: 0rem 2rem 2rem 2rem;
+            grid-template-columns: 60% 1fr;
+            grid-template-areas:
+                "title video"
+                "tech video"
+                "links video"
+                "description video";
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid #2d3436;       
+                margin-bottom: 1rem;
+            }
+
+            &__title {
+                grid-area: title;
+                color: #a29bfe;
+                font-size: 5rem;
+                font-family: 'Quantico', sans-serif;
+                text-shadow: 0 .5rem .5rem rgba($black, .2);
+                margin-top: .7rem;
+                margin-bottom: .5rem;
+            }
+
+            &__technologies {
+                grid-area: tech;
+                font-size: 2.3rem;
+                font-family: 'Quantico', sans-serif;
+            }
+
+            &__githubLinks {
+                grid-area: links;
+                margin-right: 2rem;
+                margin: 2rem 0;
+                a {
+                    font-size: 2.5rem;
+                }
+            }
+
+            &__description {
+                grid-area: description;
+                font-size: 2.5rem;
+                font-family: 'Quantico', sans-serif;
+                margin: 1rem 2rem 0 0;
+            }
+            
             &__video {
                 grid-area: video;
                 overflow: hidden;
