@@ -6,7 +6,7 @@
         &-item {
             display: flex;
             flex-direction: column;
-            color: #2d3436;
+            color: $portfolio-text;
             background-color: $white; 
             padding: 1rem 0;
             
@@ -15,7 +15,7 @@
             }
 
             &__title {
-                color: #a29bfe;
+                color: $portfolio-title;
                 font-size: 4rem;
                 font-family: 'Quantico', sans-serif;
                 text-shadow: .5rem .5rem .5rem rgba($black, .2);
@@ -72,7 +72,7 @@
         padding: 0 2rem;
         &-item {
             display: grid;
-            color: #2d3436;
+            color: $portfolio-text;
             background-color: $white; 
             padding: 0rem 2rem 2rem 2rem;
             grid-template-columns: 60% 1fr;
@@ -89,7 +89,7 @@
 
             &__title {
                 grid-area: title;
-                color: #a29bfe;
+                color: $portfolio-title;
                 font-size: 5rem;
                 font-family: 'Quantico', sans-serif;
                 text-shadow: 0 .5rem .5rem rgba($black, .2);
@@ -148,7 +148,7 @@
         padding: 0 2rem;
         &-item {
             display: grid;
-            color: #2d3436;
+            color: $portfolio-text;
             background-color: $white; 
             padding: 0rem 2rem 2rem 2rem;
             grid-template-columns: 60% 1fr;
@@ -165,7 +165,7 @@
 
             &__title {
                 grid-area: title;
-                color: #a29bfe;
+                color: $portfolio-title;
                 font-size: 5rem;
                 font-family: 'Quantico', sans-serif;
                 text-shadow: 0 .5rem .5rem rgba($black, .2);
@@ -193,6 +193,83 @@
                 font-size: 2.5rem;
                 font-family: 'Quantico', sans-serif;
                 margin: 1rem 2rem 0 0;
+            }
+            
+            &__video {
+                grid-area: video;
+                overflow: hidden;
+                padding-top: 56.25%;
+                position: relative;
+                iframe {
+                    border: 0;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    box-shadow: .5rem .5rem 1rem rgba($black, .5);
+                }
+            }
+        }     
+    }
+}
+
+//Desktops and laptops
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .portfolio {
+        height: auto;
+        padding: 2rem 2rem;
+        &-item {
+            display: grid;
+            color: $portfolio-text;
+            background-color: $white; 
+            padding: 0rem 2rem 2rem 2rem;
+            grid-template-columns: 60% 1fr;
+            grid-template-areas:
+            "title video"
+            "tech video"
+            "links video"
+            "description video";
+            
+            &:not(:first-child) {
+                margin-top: 4rem;
+            }
+            
+            &__title {
+                grid-area: title;
+                color: $portfolio-title;
+                font-size: 5rem;
+                font-family: 'Quantico', sans-serif;
+                text-shadow: 0 .5rem .5rem rgba($black, .2);
+                margin-top: .7rem;
+                margin-bottom: .5rem;
+            }
+
+            &__technologies {
+                grid-area: tech;
+                font-size: 2.3rem;
+                font-family: 'Quantico', sans-serif;
+            }
+
+            &__githubLinks {
+                grid-area: links;
+                margin-right: 2rem;
+                margin: 2rem 0;
+                a {
+                    font-size: 2.5rem;
+                }
+            }
+
+            &__description {
+                grid-area: description;
+                font-size: 2.5rem;
+                font-family: 'Quantico', sans-serif;
+                margin: 1rem 2rem 0 0;
+                padding: 0 1rem;
             }
             
             &__video {

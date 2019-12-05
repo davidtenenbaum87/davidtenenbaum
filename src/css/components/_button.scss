@@ -1,9 +1,7 @@
 .btn {
     text-decoration: none;
-    // padding: .2rem 1rem;
-    // background-color: $;
-    color: #a29bfe;
-    border-bottom: 1px solid #a29bfe;
+    color: $header;
+    border-bottom: 1px solid $header;
 }
 
 .btn-github {
@@ -11,7 +9,7 @@
     text-decoration: none;
     margin-right: 1rem;
     padding: .7rem 1.7rem;
-    border: 1px solid #a29bfe;
+    border: 1px solid $header-text;
     box-shadow: .5rem .5rem .5rem rgba($black, .2);
     font-size: 1.6rem;
     font-family: 'Quantico', sans-serif;

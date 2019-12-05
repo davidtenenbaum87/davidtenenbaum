@@ -18,7 +18,7 @@
         "icon name"
         "icon job";
         align-items: center;
-        background-color: #a29bfe; 
+        background-color: $header; 
         border-bottom: .2rem solid $white;
         position: relative;
         padding: 1rem 0;
@@ -26,7 +26,7 @@
         a:link,
         a:visited {
             text-decoration: none;
-            color: $white;
+            color: $header-text;
         }
 
         &__david-tenenbaum {
@@ -36,6 +36,11 @@
             font-family: 'Lobster', cursive;
             margin-right: 1rem;
             text-shadow: 1px 3px rgba($black, 0.2);
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white;
+            }
         }
 
         &__software-engineer {
@@ -46,6 +51,11 @@
             font-family: 'Quantico', sans-serif;
             margin-right: 1rem;
             text-shadow: 1px 3px rgba($black, 0.2);
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white;
+            }
         }
 
         &__menu {
@@ -122,7 +132,7 @@
         "name links"
         "job links";
         align-items: center;
-        background-color: #a29bfe; 
+        background-color: $header; 
         border-bottom: .2rem solid $white;
         position: relative;
         padding: 1rem 0;
@@ -130,7 +140,7 @@
         a:link,
         a:visited {
             text-decoration: none;
-            color: $white;
+            color: $header-text;
         }
 
         &__david-tenenbaum {
@@ -139,7 +149,12 @@
             font-size: 3.2rem;
             font-family: 'Lobster', cursive;
             margin-left: 1.5rem;
-            text-shadow: 1px 3px rgba($black, 0.2);
+            text-shadow: 1px 3px rgba($black, 0.2);      
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white;
+            }  
         }
 
         &__software-engineer {
@@ -150,6 +165,11 @@
             font-family: 'Quantico', sans-serif;
             margin-left: 1.5rem;
             text-shadow: 1px 3px rgba($black, 0.2);
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white;
+            }
         }
 
         &__menu {
@@ -189,84 +209,90 @@
     }
 }
 
-//Portrait and landscape iPad Pro
-// @media only screen 
-//   and (min-device-width: 1024px) 
-//   and (max-device-width: 1366px) 
-//   and (-webkit-min-device-pixel-ratio: 2) {
-//     .header {
-//         position: relative;
-//     }
+//Desktops and laptops
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .header {
+        position: relative;
+    }
     
-//     .navbar {
-//         display: grid;
-//         grid-template-areas: 
-//         "name links"
-//         "job links";
-//         align-items: center;
-//         background-color: #a29bfe; 
-//         border-bottom: .2rem solid $white;
-//         position: relative;
-//         padding: 1rem 0;
+    .navbar {
+        display: grid;
+        grid-template-areas: 
+        "name links"
+        "job links";
+        align-items: center;
+        background-color: $header; 
+        border-bottom: .2rem solid $white;
+        position: relative;
+        padding: 1rem 0;
         
-//         a:link,
-//         a:visited {
-//             text-decoration: none;
-//             color: $white;
-//         }
+        
+        &__david-tenenbaum {
+            grid-area: name;
+            justify-self: left;
+            font-size: 3.2rem;
+            font-family: 'Lobster', cursive;
+            margin-left: 1.5rem;
+            text-shadow: 1px 3px rgba($black, 0.2);
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white;
+            }
+        }
 
-//         &__david-tenenbaum {
-//             grid-area: name;
-//             justify-self: left;
-//             font-size: 3.2rem;
-//             font-family: 'Lobster', cursive;
-//             margin-left: 1.5rem;
-//             text-shadow: 1px 3px rgba($black, 0.2);
-//         }
+        &__software-engineer {
+            grid-area: job;
+            letter-spacing: .37rem;
+            justify-self: left;
+            font-size: 2rem;
+            font-family: 'Quantico', sans-serif;
+            margin-left: 1.5rem;
+            text-shadow: 1px 3px rgba($black, 0.2);
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white;
+            }
+        }
 
-//         &__software-engineer {
-//             grid-area: job;
-//             letter-spacing: .37rem;
-//             justify-self: left;
-//             font-size: 2rem;
-//             font-family: 'Quantico', sans-serif;
-//             margin-left: 1.5rem;
-//             text-shadow: 1px 3px rgba($black, 0.2);
-//         }
-
-//         &__menu {
-//             &--desktop {
-//                 grid-area: links;
-//                 justify-self: right;
-//                 align-self: center;
-//                 margin-right: 1rem; 
-//             }
+        &__menu {
+            &--desktop {
+                grid-area: links;
+                justify-self: right;
+                align-self: center;
+                margin-right: 1rem; 
+            }
             
-//             a:link,
-//             a:visited {
-//                 text-decoration: none;
-//                 color: $white; 
-//             }
+            a:link,
+            a:visited {
+                text-decoration: none;
+                color: $white; 
+            }
 
-//             &--icon {
-//                 display: none;
-//             }
+            &--icon {
+                display: none;
+            }
 
-//             &--hidden-before {
-//                 display: none;
-//             }
+            &--hidden-before {
+                display: none;
+            }
 
-//             &--hidden-after {
-//                 display: none;
-//             }
+            &--hidden-after {
+                display: none;
+            }
             
-//             &--visible {
-//                 display: none;
-//             }
+            &--visible {
+                display: none;
+            }
 
-//             &--pages {
-//                 @include menuLinksDesktop;
-//             }
-//         }
-//     } 
-// }
+            &--pages {
+                @include menuLinksDesktop;
+            }
+        }
+    } 
+}

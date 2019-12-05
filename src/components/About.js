@@ -5,7 +5,7 @@ const About = props => {
     <section className="about">
       <div className="about__experience">
         <h4 className="header-about u-margin-bottom-extra-small">
-          Experience:
+          Experience
         </h4>
         <ul>
           <li className="u-text-bold"><i className="fas fa-laptop-code"></i>Software Engineer @ &nbsp;
@@ -19,7 +19,7 @@ const About = props => {
 
       <div className="about__skills">
         <h4 className="header-about u-margin-bottom-extra-small">
-          Skills:
+          Skills
         </h4>
         <div className="about__skills--list">
           <ul>
@@ -40,7 +40,7 @@ const About = props => {
 
       <div className="about__education">
         <h4 className="header-about u-margin-bottom-extra-small">
-          Education:
+          Education
         </h4>
         <div className="about__education--school">
           <li className="u-text-bold">

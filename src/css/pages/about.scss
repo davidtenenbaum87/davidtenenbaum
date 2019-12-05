@@ -7,7 +7,7 @@
         padding: 1rem 2rem;
         font-size: 1.6rem;
         font-family: 'Quantico', sans-serif;
-        color: #2d3436;
+        color: $black;
         animation: fadeIn 2s ease-in;
 
         &__experience,
@@ -24,7 +24,7 @@
 
         i {
             margin-right: 1rem;
-            color: #a29bfe;
+            color: $about-icon;
             font-size: 2.5rem;
             display: inline-block;
         }
@@ -41,7 +41,7 @@
         padding: 1rem 4rem;
         font-size: 2.4rem;
         font-family: 'Quantico', sans-serif;
-        color: #2d3436;
+        color: $black;
         animation: fadeIn 2s ease-in;
         display: grid;
         grid-template-columns: 70% 1fr;
@@ -52,7 +52,7 @@
 
         h4 {
             font-size: 4rem;
-            color: #2d3436;
+            color: $about-text;
             text-shadow: 0 .5rem .5rem rgba($black, .2);
             margin-bottom: 2rem;
         }
@@ -86,7 +86,7 @@
 
         i {
             margin-right: 1rem;
-            color: #a29bfe;
+            color: $about-icon;
             font-size: 2.5rem;
         }
     }
@@ -102,7 +102,7 @@
         padding: 1rem 4rem;
         font-size: 2.7rem;
         font-family: 'Quantico', sans-serif;
-        color: #2d3436;
+        color: $black;
         animation: fadeIn 2s ease-in;
         display: grid;
         grid-template-columns: 70% 1fr;
@@ -113,7 +113,7 @@
 
         h4 {
             font-size: 5rem;
-            color: #2d3436;
+            color: $about-text;
             text-shadow: 0 .5rem .5rem rgba($black, .2);
             margin-bottom: 2rem;
         }
@@ -147,7 +147,70 @@
 
         i {
             margin-right: 1rem;
-            color: #a29bfe;
+            color: $about-icon;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+//Desktops and laptops
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .about {
+        height: 73vh;
+        padding: 1rem 4rem;
+        font-size: 1.6rem;
+        font-family: 'Quantico', sans-serif;
+        color: $black;
+        animation: fadeIn 2s ease-in;
+        display: grid;
+        grid-template-areas: 
+            "experience skills education";
+        
+        &:not(:last-child) {
+            border-right: 1px solid #2d3436;
+        }
+
+        h4 {
+            font-size: 3rem;
+            color: $about-text;
+            text-shadow: 0 .5rem .5rem rgba($black, .2);
+            margin-bottom: 2rem;
+        }
+ 
+        &__experience {
+            grid-area: experience;
+        }
+
+        &__skills {
+            grid-area: skills;
+        }
+
+        &__education {
+            grid-area: education;
+        }
+        
+        &__location {
+            grid-area: location;
+        }
+        
+        &__experience,
+        &__skills,
+        &__education {
+            display: inline-block;
+            li {
+                list-style: none;
+                text-align: left;
+                margin-left: 3rem;
+            }
+        }
+
+        i {
+            margin-right: 1rem;
+            color: $about-icon;
             font-size: 2.5rem;
         }
     }
