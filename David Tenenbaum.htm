@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/portfolio -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="stylesheet" href="./David Tenenbaum_files/devicon.min.css">
+    <link href="./David Tenenbaum_files/css" rel="stylesheet">
+    <script src="./David Tenenbaum_files/b2aec5af2d.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./David Tenenbaum_files/free.min.css" media="all"><link rel="stylesheet" href="./David Tenenbaum_files/free-v4-font-face.min.css" media="all"><link rel="stylesheet" href="./David Tenenbaum_files/free-v4-shims.min.css" media="all">
+    <title>David Tenenbaum</title>
+  <style>@keyframes displayMenu {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    height: 0vh; }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    height: 100vh; } }
+
+@keyframes removeMenu {
+  0% {
+    opacity: 1;
+    height: 100vh;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    height: 0vh;
+    visibility: hidden; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  background-color: white;
+  box-sizing: border-box; }
+
+body {
+  z-index: 0; }
+
+.header-about {
+  font-size: 2.5rem;
+  display: inline-block; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-extra-small {
+  margin-bottom: .8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
+.u-margin-left-small {
+  margin-left: 1rem; }
+
+.u-text-bold {
+  font-weight: bold; }
+
+.u-text-italic {
+  font-style: italic; }
+
+.u-border-bottom {
+  border-bottom: .5px solid black; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .navbar {
+    display: grid;
+    grid-template-areas: "menu name";
+    align-items: center;
+    background-color: #5c94bd;
+    border-bottom: 0.2rem solid #FFF;
+    position: relative;
+    padding: 1rem 0; }
+    .navbar__name {
+      grid-area: "name";
+      justify-self: right;
+      font-size: 1.5rem;
+      font-family: 'Lobster', cursive;
+      margin-right: 1rem;
+      text-shadow: 1px 3px rgba(0, 0, 0, 0.2); }
+    .navbar a:link,
+    .navbar a:visited {
+      text-decoration: none;
+      color: #FFF; }
+    .navbar__menu--icon {
+      grid-area: "menu";
+      justify-self: left;
+      color: #FFF;
+      font-size: 3rem;
+      padding-top: .5rem;
+      margin-left: 1rem; }
+    .navbar__menu--visible {
+      position: absolute;
+      visibility: visible;
+      width: 100vw;
+      height: 100vh;
+      background-color: #FFF;
+      animation: displayMenu .5s ease-in;
+      animation-fill-mode: forwards;
+      overflow: hidden; }
+      .navbar__menu--visible--hidden {
+        position: fixed;
+        visibility: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: #FFF;
+        animation: removeMenu .5s ease-out;
+        animation-fill-mode: forwards;
+        overflow: hidden; }
+        .navbar__menu--visible--hidden .hidden {
+          display: none; }
+    .navbar .menu-pages a:link,
+    .navbar .menu-pages a:visited {
+      display: block;
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-family: 'Encode Sans', sans-serif;
+      color: black;
+      margin: auto 1rem;
+      padding: 2rem 0; }
+    .navbar .menu-pages a {
+      border-bottom: 0.1rem solid #000; }
+    .navbar .menu-social-media {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 0.1rem solid #000;
+      margin: auto 1rem; }
+      .navbar .menu-social-media a:link,
+      .navbar .menu-social-media a:visited {
+        display: block;
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-family: 'Encode Sans', sans-serif;
+        color: black;
+        margin: auto 1rem;
+        padding: 2rem 0; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .footer {
+    display: grid;
+    grid-template-areas: "links" "copyright";
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    font-size: 1.5rem;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    background-color: #5c94bd;
+    border-top: 0.3rem solid #FFF; }
+    .footer a:link,
+    .footer a:visited {
+      text-decoration: none;
+      color: #FFF;
+      font-size: 3rem; }
+      .footer a:link:not(:last-child),
+      .footer a:visited:not(:last-child) {
+        margin-right: 2.2rem; }
+    .footer-copyright {
+      grid-area: "copyright";
+      justify-self: center;
+      font-family: 'Quantico', sans-serif;
+      color: #FFF;
+      margin: 1rem 0; }
+    .footer-links {
+      grid-area: "links";
+      justify-self: center;
+      margin-top: 2rem; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .home {
+    height: auto; }
+    .home__background-image {
+      height: 76vh;
+      background-image: linear-gradient(233deg, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.73)), url("/img/david-tenenbaum2.jpg");
+      background-size: cover;
+      background-position: center;
+      animation: fadeIn 2s ease-in; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .about {
+    padding: 1rem 2rem;
+    height: auto;
+    font-size: 1.6rem;
+    font-family: 'Quantico', sans-serif;
+    color: #1a3e59;
+    background-image: linear-gradient(to right top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/img/david-tenenbaum-about.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in; }
+    .about__employment {
+      margin-bottom: 2rem; }
+    .about__skills {
+      margin-bottom: 2rem; }
+    .about__education {
+      margin-bottom: 1rem; }
+      .about__education--school {
+        padding: .5rem 0; }
+    .about li {
+      list-style: none;
+      margin: .5rem auto; }
+    .about i {
+      margin-right: 1rem;
+      color: #1a3e59;
+      font-size: 2.5rem;
+      display: inline-block; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .portfolio-item {
+    display: flex;
+    flex-direction: column;
+    color: #1a3e59;
+    background-color: #FFF;
+    padding: 1rem 0; }
+    .portfolio-item:not(:last-child) {
+      border-bottom: 1px solid #1a3e59; }
+    .portfolio-item-title {
+      color: #1a3e59;
+      font-size: 3rem;
+      font-family: 'Leckerli One', cursive;
+      text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+      margin-left: 2rem;
+      margin-top: .7rem;
+      margin-bottom: .5rem;
+      padding-bottom: 2rem; }
+    .portfolio-item-githubLinks {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+      font-family: 'Quantico', sans-serif; }
+      .portfolio-item-githubLinks a {
+        color: #1a3e59;
+        text-decoration: none;
+        margin-right: 1rem;
+        padding: .7rem 1.7rem;
+        border: 1px solid #1a3e59;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+    .portfolio-item-description {
+      font-size: 1.6rem;
+      font-family: 'Quantico', sans-serif;
+      margin: 1rem 2rem 0 2rem; }
+    .portfolio-item-video {
+      margin: 2.5rem auto;
+      text-align: center; }
+      .portfolio-item-video iframe {
+        width: 80%;
+        box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5); } }
+
+.btn {
+  text-decoration: none;
+  padding: .2rem 1rem;
+  background-color: #1a3e59;
+  color: #FFF;
+  border-radius: 100px; }
+</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="app"><nav class="navbar"><div class="navbar__menu--icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><div class="navbar__name"><h1><a aria-current="page" class="navbar-link-home active" href="http://localhost:3000/">David Tenenbaum</a></h1></div><div class="navbar__menu--hidden"><div class="navbar__menu--visible"><a class="menu__pages--about" href="http://localhost:3000/about">About</a><a aria-current="page" class="menu__pages--portfolio active" href="http://localhost:3000/portfolio">Portfolio</a><a class="menu__pages--resume" target="_blank" href="http://localhost:3000/David-Tenenbaum-CV.pdf">Resume</a></div><div class="menu__visible--social-media"><a href="https://www.linkedin.com/in/davidtenenbaum87/" class="linkedIn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a><a href="https://github.com/davidtenenbaum87" class="github"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="mailto:david.tenenbaum87@gmail.com?subject=Hello,%20David!" class="gmail"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 488 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></a></div></div></nav><div class="portfolio"><div class="portfolio-item"><h3 class="portfolio-item-title">Boggle</h3><div class="portfolio-item-githubLinks"><a href="https://github.com/davidtenenbaum87/boggle-frontend">Front-End →</a><a href="https://github.com/davidtenenbaum87/boggle-backend">Back-End →</a></div><p class="portfolio-item-description">Word game played using a grid of lettered dice, in which players attempt to find words in sequences of adjacent letters</p><div class="portfolio-item-video"><iframe title="Boggle" src="./David Tenenbaum_files/288186446.html" frameborder="none" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe></div></div><div class="portfolio-item"><h3 class="portfolio-item-title">Trello</h3><div class="portfolio-item-githubLinks"><a href="https://github.com/davidtenenbaum87/Trello-Ruby-on-Rails">Github →</a></div><p class="portfolio-item-description">Inspired by Trello.com, this is a fun, flexible and friendly way to organize plans, projects and more</p><div class="portfolio-item-video"><iframe title="Trello" src="./David Tenenbaum_files/288975230.html" frameborder="none" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe></div></div><div class="portfolio-item"><h3 class="portfolio-item-title">MusicStation</h3><div class="portfolio-item-githubLinks"><a href="https://github.com/davidtenenbaum87/Music-Station-FrontEnd">Front-End →</a><a href="https://github.com/davidtenenbaum87/Music-Station-BackEnd">Back-End →</a></div><p class="portfolio-item-description">Browser-based music library enabling a better music learning experience for musicians. Upload music sheet to your library, automatically search and stream performances from YouTube, and access built-in metronome and tuner for practicing</p><div class="portfolio-item-video"><iframe title="MusicStation" src="./David Tenenbaum_files/288988954.html" frameborder="none" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen=""></iframe></div></div></div><div class="footer"><div class="footer-links"><a class="linkedIn" href="https://www.linkedin.com/in/davidtenenbaum87/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a><a class="linkedIn" href="https://github.com/davidtenenbaum87"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a class="linkedIn" href="mailto:david.tenenbaum87@gmail.com?subject=Hello,%20David!"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 488 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></a></div><div class="footer-copyright">David Tenenbaum © 2019</div></div></div></div>
+
+  <script src="./David Tenenbaum_files/bundle.js"></script><script src="./David Tenenbaum_files/1.chunk.js"></script><script src="./David Tenenbaum_files/main.chunk.js"></script><script src="./David Tenenbaum_files/main.45357995020496dcd1f4.hot-update.js"></script>
+
+</body></html>
