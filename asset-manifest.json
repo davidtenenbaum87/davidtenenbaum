@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.1fb6ebd9.chunk.css",
-    "main.js": "/static/js/main.c4fdbfb6.chunk.js",
-    "main.js.map": "/static/js/main.c4fdbfb6.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.40ac7258.js",
-    "runtime~main.js.map": "/static/js/runtime~main.40ac7258.js.map",
-    "static/js/2.884ac1f8.chunk.js": "/static/js/2.884ac1f8.chunk.js",
-    "static/js/2.884ac1f8.chunk.js.map": "/static/js/2.884ac1f8.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d0d05603ac9a145761003d9d774a6e8b.js": "/precache-manifest.d0d05603ac9a145761003d9d774a6e8b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.1fb6ebd9.chunk.css.map": "/static/css/main.1fb6ebd9.chunk.css.map"
+    "main.css": "/davidtenenbaum/static/css/main.1fb6ebd9.chunk.css",
+    "main.js": "/davidtenenbaum/static/js/main.c4fdbfb6.chunk.js",
+    "main.js.map": "/davidtenenbaum/static/js/main.c4fdbfb6.chunk.js.map",
+    "runtime~main.js": "/davidtenenbaum/static/js/runtime~main.0b96aa95.js",
+    "runtime~main.js.map": "/davidtenenbaum/static/js/runtime~main.0b96aa95.js.map",
+    "static/js/2.884ac1f8.chunk.js": "/davidtenenbaum/static/js/2.884ac1f8.chunk.js",
+    "static/js/2.884ac1f8.chunk.js.map": "/davidtenenbaum/static/js/2.884ac1f8.chunk.js.map",
+    "index.html": "/davidtenenbaum/index.html",
+    "precache-manifest.bbdaa06f93f9c70103397c614b4dd77f.js": "/davidtenenbaum/precache-manifest.bbdaa06f93f9c70103397c614b4dd77f.js",
+    "service-worker.js": "/davidtenenbaum/service-worker.js",
+    "static/css/main.1fb6ebd9.chunk.css.map": "/davidtenenbaum/static/css/main.1fb6ebd9.chunk.css.map"
   }
 }
